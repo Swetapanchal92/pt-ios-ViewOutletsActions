@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewOutletActionsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-9W-Sy9">
+                                <rect key="frame" x="16" y="141" width="288" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr2-Pf-MQx">
+                                <rect key="frame" x="108.5" y="488" width="103" height="30"/>
+                                <state key="normal" title="Random Image"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BDZ-LM-3hP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evc-p0-35V">
+                                <rect key="frame" x="139" y="70" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-oy-f05">
+                                <rect key="frame" x="16" y="193" width="288" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="WNM-Nc-h0V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vr2-Pf-MQx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Hu-oK-6aS"/>
+                            <constraint firstItem="z3e-oy-f05" firstAttribute="top" secondItem="s9Y-9W-Sy9" secondAttribute="bottom" constant="50" id="3NZ-VU-RhO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="vr2-Pf-MQx" secondAttribute="bottom" constant="50" id="728-KJ-Mpb"/>
+                            <constraint firstItem="evc-p0-35V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Uc-64-uaq"/>
+                            <constraint firstItem="s9Y-9W-Sy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8j-4V-X3E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s9Y-9W-Sy9" secondAttribute="trailing" id="FnK-vv-ths"/>
+                            <constraint firstItem="z3e-oy-f05" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JlT-dS-Ek9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z3e-oy-f05" secondAttribute="trailing" id="Ydh-9q-rmZ"/>
+                            <constraint firstItem="s9Y-9W-Sy9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fUT-Um-fIa"/>
+                            <constraint firstItem="evc-p0-35V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="tJJ-41-iyR"/>
+                            <constraint firstItem="s9Y-9W-Sy9" firstAttribute="top" secondItem="evc-p0-35V" secondAttribute="bottom" constant="50" id="ybE-Bb-Etb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="z3e-oy-f05" id="JqV-0S-m5e"/>
+                        <outlet property="nameLabel" destination="evc-p0-35V" id="SVF-LK-a3g"/>
+                        <outlet property="progressView" destination="s9Y-9W-Sy9" id="cC9-iU-Fbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
